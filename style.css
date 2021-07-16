@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body { background: white;
+font-family: 'Montserrat', sans-serif;
+}
+section { 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:90%;
+  max-width:800px;
+  margin:0 auto;
+  color:#222;
+  text-transform:uppercase;
+  font-size:2.8em;
+  font-weight:700;
+}
+.full { height:100vh; background:#E0E0E0 }
+.half { height:50vh; background:#E0E0E0 }
+.mini { height:25vh; background:#E0E0E0 }
+
+.banner { color: #E8E8E8; 
+  display:flex;
+  align-items:stretch;
+}
+
+a {
+  color:inherit;
+  text-decoration:underline
+}
+
+/* first banner */
+
+.banner3d-1 {
+    width:100%;
+    perspective: 700px; /* why would I do that? well there is a very strange bug with safari, and it fixed it... */
+    transform-style: preserve-3d;
+}
+
+.banner3d-1-front {
+    padding:50px;
+    background:#222;
+    transform: translatez(50px);
+    transform-style: preserve-3d;
+}
+
+.banner3d-1-front:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #BFBFBF;
+    top: -50px;
+    transform-origin: center bottom;
+    transform: rotatex(90deg);
+}
+
+.banner3d-1-front:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #BFBFBF;
+    bottom: -50px;
+    transform-origin: center top;
+    transform: rotatex(-90deg);
+}
+
+/* second banner */
+
+.banner3d-2 {
+    width:100%;
+    perspective: 700px;
+    transform-style: preserve-3d;
+  z-index:-1;
+}
+
+.banner3d-2-front {
+    padding:50px;
+    background:#222;
+    transform: translatez(-50px);
+    transform-style: preserve-3d;
+}
+
+.banner3d-2-front:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #BFBFBF;
+    top: -50px;
+    transform-origin: center bottom;
+    transform: rotatex(-90deg);
+}
+
+.banner3d-2-front:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #BFBFBF;
+    bottom: -50px;
+    transform-origin: center top;
+    transform: rotatex(90deg);
+}
+
+/* 3rd banner */
+
+.banner3d-3 {
+    width:50%;
+    perspective: 700px;
+    transform-style: preserve-3d;
+}
+
+.banner3d-3-front {
+    padding:100px 25px;
+    text-align:center;
+    background:#222;
+    transform: translatez(50px);
+    transform-style: preserve-3d;
+}
+
+.banner3d-3-front:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #404040;
+    top: -50px;
+    transform-origin: center bottom;
+    transform: rotatex(90deg);
+}
+
+.banner3d-3-front:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #404040;
+    bottom: -50px;
+    transform-origin: center top;
+    transform: rotatex(-90deg);
+}
+
+.image {
+  width:50%;
+  background:url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.cineacamaralenta.com%2Fwp-content%2Fuploads%2F2013%2F02%2Fdjango-desencadenado-945x591.jpg&f=1&nofb=1) no-repeat;
+  background-size:cover;
+  background-position:center;
+  box-shadow: inset 25px 0px 20px 10px rgba(0,0,0,0.41)
+}
+
+
+/* fourth banner */
+
+.banner3d-4 {
+    width:60%;
+    perspective: 700px;
+    transform-style: preserve-3d;
+  z-index:-1;
+}
+
+.banner3d-4-front {
+    padding:25px;
+    background:#222;
+    transform: translatez(-50px);
+    transform-style: preserve-3d;
+}
+
+.banner3d-4-front:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #BFBFBF;
+    top: -50px;
+    transform-origin: center bottom;
+    transform: rotatex(-90deg);
+}
+
+.banner3d-4-front:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #BFBFBF;
+    bottom: -50px;
+    transform-origin: center top;
+    transform: rotatex(90deg);
+}
+
+.image2 {
+  width:40%;
+  background:url(https://images.unsplash.com/photo-1501526029524-a8ea952b15be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80) no-repeat;
+  background-size:cover;
+  background-position:center center;
+  border:20px solid #E0E0E0;
+  box-sizing:border-box;
+}
+
+@media (max-width: 991px) {
+  section {
+    font-size:2em;
+  }
+  .banner {
+    flex-direction:column
+  }
+  .banner3d-3, .banner3d-4 {
+    width:100%
+  }
+  .image, .image2 {
+	  width:100%;
+	  height:300px;
+  }
+}
